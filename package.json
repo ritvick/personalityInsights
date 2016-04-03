@@ -1,0 +1,37 @@
+{
+  "name": "DCracker Personality Insights",
+  "version": "1.0",
+  "description": "Web App to find out personality insights",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ritvick/personalityInsights.git"
+  },
+  "author": "Ritvick Paliwal",
+  "contributors": [
+    {
+      "name": "Ritvick Paliwal",
+      "email": "ritvick.paliwal@gmail.com"
+    }   
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ritvick/personalityInsights/issues"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.11.0",
+    "cookie-parser": "^1.4.0",
+    "csurf": "^1.8.3",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-rate-limit": "^2.0.2",
+    "express-secure-only": "^0.2.1",
+    "helmet": "^1.3.0",
+    "promise": "~7.0.4",
+    "q": "^1.4.1",
+    "request": "^2.67.0",
+    "watson-developer-cloud": "^1.2.5"
+  }
+}
