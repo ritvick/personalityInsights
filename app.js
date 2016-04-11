@@ -4,6 +4,7 @@ var express = require('express'),
   bodyParser  = require('body-parser');
 
 app.set('view engine', 'ejs');  
+app.use('/lib', express.static('lib'));
 
 // Configure Express
   app.use(bodyParser.urlencoded({ extended: true, limit: '15mb' }));
@@ -36,7 +37,7 @@ app.get('/test', function(req,  res) {
 
 app.get('/', function(req, res) {
 
-	res.render('index');
+	res.render('indexKavish');
 
 });
 

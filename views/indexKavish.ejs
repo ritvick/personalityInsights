@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="lib/jqcloud.css"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+	<!-- <script src="d3.layout.cloud.js" ></script> -->
+	<!-- <script src="wordcloud.js.js" ></script> -->
+	<script src="lib/jqcloud.js"></script>
+
+	<script type="text/javascript">
+		/*messages = {"id":"r","name":"root","children":[{"id":"personality","name":"Big 5","children":[{"id":"Conscientiousness_parent","name":"Conscientiousness","category":"personality","percentage":0.8986352953294282,"children":[{"id":"Openness","name":"Openness","category":"personality","percentage":0.7452150105127816,"sampling_error":0.0621747219,"children":[{"id":"Adventurousness","name":"Adventurousness","category":"personality","percentage":0.8062259429013193,"sampling_error":0.0523505219},{"id":"Artistic interests","name":"Artistic interests","category":"personality","percentage":0.946576627881103,"sampling_error":0.1070360341},{"id":"Emotionality","name":"Emotionality","category":"personality","percentage":0.2537297202050228,"sampling_error":0.0489290401},{"id":"Imagination","name":"Imagination","category":"personality","percentage":0.6968180159683675,"sampling_error":0.06608961990000001},{"id":"Intellect","name":"Intellect","category":"personality","percentage":0.6545242459925178,"sampling_error":0.057767925500000004},{"id":"Liberalism","name":"Authority-challenging","category":"personality","percentage":0.5926901846476336,"sampling_error":0.0857430914}]},{"id":"Conscientiousness","name":"Conscientiousness","category":"personality","percentage":0.8986352953294282,"sampling_error":0.0781113279,"children":[{"id":"Achievement striving","name":"Achievement striving","category":"personality","percentage":0.9516185502053138,"sampling_error":0.1012466297},{"id":"Cautiousness","name":"Cautiousness","category":"personality","percentage":0.7237783471496264,"sampling_error":0.0937722156},{"id":"Dutifulness","name":"Dutifulness","category":"personality","percentage":0.8996375341936733,"sampling_error":0.0620204345},{"id":"Orderliness","name":"Orderliness","category":"personality","percentage":0.12104170476203853,"sampling_error":0.0720846754},{"id":"Self-discipline","name":"Self-discipline","category":"personality","percentage":0.9270170237238305,"sampling_error":0.0478272558},{"id":"Self-efficacy","name":"Self-efficacy","category":"personality","percentage":0.9231191297096459,"sampling_error":0.09465330320000001}]},{"id":"Extraversion","name":"Extraversion","category":"personality","percentage":0.27468091810527107,"sampling_error":0.0582411425,"children":[{"id":"Activity level","name":"Activity level","category":"personality","percentage":0.9110655395686517,"sampling_error":0.0798087497},{"id":"Assertiveness","name":"Assertiveness","category":"personality","percentage":0.2859593878080123,"sampling_error":0.0851122588},{"id":"Cheerfulness","name":"Cheerfulness","category":"personality","percentage":0.4640822125937698,"sampling_error":0.1072589564},{"id":"Excitement-seeking","name":"Excitement-seeking","category":"personality","percentage":0.5051240799083352,"sampling_error":0.0823778426},{"id":"Friendliness","name":"Outgoing","category":"personality","percentage":0.5106357927284466,"sampling_error":0.0772112017},{"id":"Gregariousness","name":"Gregariousness","category":"personality","percentage":0.5729870184796505,"sampling_error":0.058899874899999996}]},{"id":"Agreeableness","name":"Agreeableness","category":"personality","percentage":0.42554820609397165,"sampling_error":0.0991452,"children":[{"id":"Altruism","name":"Altruism","category":"personality","percentage":0.7576893594065588,"sampling_error":0.0724958782},{"id":"Cooperation","name":"Cooperation","category":"personality","percentage":0.6605553252405232,"sampling_error":0.081493479},{"id":"Modesty","name":"Modesty","category":"personality","percentage":0.9196672466535449,"sampling_error":0.0576276656},{"id":"Morality","name":"Uncompromising","category":"personality","percentage":0.6090103443257281,"sampling_error":0.0645808581},{"id":"Sympathy","name":"Sympathy","category":"personality","percentage":0.3862532406796705,"sampling_error":0.09997205029999999},{"id":"Trust","name":"Trust","category":"personality","percentage":0.7115790418929685,"sampling_error":0.0575124984}]},{"id":"Neuroticism","name":"Emotional range","category":"personality","percentage":0.15424683443969478,"sampling_error":0.0931186786,"children":[{"id":"Anger","name":"Fiery","category":"personality","percentage":0.1581002956400474,"sampling_error":0.09616963590000001},{"id":"Anxiety","name":"Prone to worry","category":"personality","percentage":0.17374771573568934,"sampling_error":0.056583919499999996},{"id":"Depression","name":"Melancholy","category":"personality","percentage":0.20634293428622372,"sampling_error":0.0603398314},{"id":"Immoderation","name":"Immoderation","category":"personality","percentage":0.13108726902388923,"sampling_error":0.0542039685},{"id":"Self-consciousness","name":"Self-consciousness","category":"personality","percentage":0.6306521869347625,"sampling_error":0.0583826715},{"id":"Vulnerability","name":"Susceptible to stress","category":"personality","percentage":0.2891335978858847,"sampling_error":0.087458569}]}]}]},{"id":"needs","name":"Needs","children":[{"id":"Harmony_parent","name":"Harmony","category":"needs","percentage":0.0665793467342143,"children":[{"id":"Challenge","name":"Challenge","category":"needs","percentage":0.07193450860624974,"sampling_error":0.08520509},{"id":"Closeness","name":"Closeness","category":"needs","percentage":0.10468099008347957,"sampling_error":0.0840100744},{"id":"Curiosity","name":"Curiosity","category":"needs","percentage":0.30028334130233103,"sampling_error":0.12166767449999999},{"id":"Excitement","name":"Excitement","category":"needs","percentage":0.25727712369034617,"sampling_error":0.1109473451},{"id":"Harmony","name":"Harmony","category":"needs","percentage":0.0665793467342143,"sampling_error":0.11075684570000001},{"id":"Ideal","name":"Ideal","category":"needs","percentage":0.34891579622437807,"sampling_error":0.1005410823},{"id":"Liberty","name":"Liberty","category":"needs","percentage":0.15825639166931912,"sampling_error":0.1474382628},{"id":"Love","name":"Love","category":"needs","percentage":0.12291098558346136,"sampling_error":0.1019450186},{"id":"Practicality","name":"Practicality","category":"needs","percentage":0.19348163980312724,"sampling_error":0.08852125450000001},{"id":"Self-expression","name":"Self-expression","category":"needs","percentage":0.7570960337025892,"sampling_error":0.0825750583},{"id":"Stability","name":"Stability","category":"needs","percentage":0.2073231647876646,"sampling_error":0.10786966369999999},{"id":"Structure","name":"Structure","category":"needs","percentage":0.34312710312555456,"sampling_error":0.0809772664}]}]},{"id":"values","name":"Values","children":[{"id":"Self-transcendence_parent","name":"Self-transcendence","category":"values","percentage":0.09071886872322121,"children":[{"id":"Conservation","name":"Conservation","category":"values","percentage":0.8248294873492875,"sampling_error":0.06894185879999999},{"id":"Openness to change","name":"Openness to change","category":"values","percentage":0.6939350386047863,"sampling_error":0.06539429699999999},{"id":"Hedonism","name":"Hedonism","category":"values","percentage":0.849273740278756,"sampling_error":0.1393497433},{"id":"Self-enhancement","name":"Self-enhancement","category":"values","percentage":0.8260647966640727,"sampling_error":0.10504186580000001},{"id":"Self-transcendence","name":"Self-transcendence","category":"values","percentage":0.09071886872322121,"sampling_error":0.082755669}]}]}]}*/
+
+		var xmlhttp = new XMLHttpRequest();
+		
+		function createWordCloud(twitterID){
+ 			console.log(twitterID);
+			$('#keywords').jQCloud('destroy');
+			if (twitterID === "") {
+				alert("Please enter valid twitter ID");
+				return false;
+			}
+			var url = "http://personalitymatching.mybluemix.net/getUserTweets?screen_name=" + twitterID;
+
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+					var nodeRedOutput = JSON.parse(xmlhttp.responseText);
+					var words = processData(nodeRedOutput);
+					//alert(words[1].name);
+					$('#keywords').jQCloud(words,{"width": 800, 'height': 400, "autoResize":true});
+					console.log(words); 
+					/*var big5_array = nodeRedOutput.children[0].children[0].children;
+					var needs_array = nodeRedOutput.children[1];
+					var values_array = nodeRedOutput.children[2];
+					
+					var big5_string = "";
+					for (var i = 0; i < big5_array.length; i++) {
+						big5_string += big5_array[i].name + " : " +
+										big5_array[i].percentage * 100 + "<br>";
+					}
+					
+					
+					document.getElementById("output").innerHTML += big5_string;
+					
+					var full_text = "<br><br>This is the full response:<br>";
+					full_text += xmlhttp.responseText;
+					document.getElementById("full_output").innerHTML = full_text;*/
+				}
+			};
+			
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();
+
+			/*//TODO do get twitter data using watson API here and pass json to process data function
+			var insightsJson = 0; //watsonAPI
+			var words = processData(insightsJson);
+			//alert(words[1].name);
+			//$('#keywords').jQCloud('destroy');
+			$('#keywords').jQCloud(words,{"width": 800, 'height': 400, "autoResize":true});
+			console.log(words); */
+		}
+
+		function processData(insightsJson){
+		var data = insightsJson; //= insightsJson; //JSON.parse(jsonString);
+		var traits = [];
+
+		for(var middleCtr = 0; middleCtr < data.children.length; middleCtr++){
+			for(var topCtr = 0; topCtr < data.children[middleCtr].children.length; topCtr++){
+				for (var  i = 0; i < data.children[middleCtr].children[topCtr].children.length; i++ ){
+					var trait = data.children[middleCtr].children[topCtr].children;
+					//traits.push([trait[i].name, trait[i].percentage *10]);
+					traits.push({'text':trait[i].name, 'weight':trait[i].percentage *100});
+				}
+			}
+		}
+/*
+		for(i=0; i < traits.length; i++){
+			console.log(traits[i].name + '  ' + traits[i].percentage*10);
+		}*/
+		return traits;
+  	}
+
+
+
+  </script>
+  <style>
+  	.node {
+  		cursor: pointer;
+  	}
+
+  	.node:hover {
+  		stroke: #000;
+  		stroke-width: 1.5px;
+  	}
+
+  	.node--leaf {
+  		fill: white;
+  	}
+
+  	.label {
+  		font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  		text-anchor: middle;
+  		text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+  	}
+
+  	.label,
+  	.node--root,
+  	.node--leaf {
+  		pointer-events: none;
+  	}
+  	/* Remove the navbar's default margin-bottom and rounded borders */ 
+  	.navbar {
+  		margin-bottom: 0;
+  		border-radius: 0;
+  	}
+
+  	/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  	.row.content {height: 450px}
+
+  	/* Set gray background color and 100% height */
+  	.sidenav {
+  		padding-top: 20px;
+  		background-color: #f1f1f1;
+  		height: 100%;
+  	}
+
+  	/* Set black background color, white text and some padding */
+  	footer {
+  		background-color: #555;
+  		color: white;
+  		padding: 15px;
+  	}
+
+  	/* On small screens, set height to 'auto' for sidenav and grid */
+  	@media screen and (max-width: 767px) {
+  		.sidenav {
+  			height: auto;
+  			padding: 15px;
+  		}
+  		.row.content {height:auto;} 
+  	}
+  </style>
+</head>
+<body>
+		<div class="container center">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="page-header">
+						<h1>
+							Your emotion map! <small>Know your personality based on tweets</small>
+						</h1>
+					</div>
+					<div class="form-group">
+						<label for="twitterid">Twitter ID:</label>
+						<input type="text" class="form-control" id="twitterid">
+					</div>
+					<button type="submit" class="btn btn-primary btn-md btn-block" onclick="createWordCloud($('#twitterid').val())">Submit</button>
+			
+			</div>
+		<div id="keywords" class="container center">
+			
+		</div>
+		</div>
+	</div>
+</body>
+</html>
